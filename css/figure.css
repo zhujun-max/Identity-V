@@ -1,0 +1,397 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Microsoft YaHei", simSun, "Lucida Grande", "Lucida Sans Unicode", Arial;
+    font-size: 14px;
+}
+
+
+li {
+    list-style: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    min-width: 1450px;
+    min-height: 960px;
+    height: auto;
+    background: #000;
+}
+
+/* 背景圖 */
+.container {
+    width: 100%;
+    height: 1000px;
+    min-height: 1000px;
+    min-width: 1450px;
+    position: relative;
+    overflow: hidden;
+    background: url(../image/stt-22.jpg) no-repeat center;
+
+}
+
+/* 透明背景 */
+.zg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1166px;
+    background: url(../image/stt-78.png) no-repeat top center;
+    pointer-events: none;
+    z-index: 200;
+}
+
+/* logo */
+.logo {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: url(../image/stt-1.png);
+    background-size: 100% auto;
+    z-index: 100;
+    top: 86px;
+    left: 32px;
+}
+
+/* 進入官網圖標 */
+.go_index {
+    position: absolute;
+    width: 185px;
+    height: 43px;
+    background: url(../image/stt-2.png) no-repeat;
+    right: 54px;
+    top: 94px;
+    z-index: 100;
+    transition: all .5s;
+    transform: scale(1);
+}
+
+/* 官網點擊放大 */
+.go_index:hover {
+    transition: all .5s;
+    transform: scale(1.06);
+}
+
+/* 頁面總體 */
+.mid {
+    width: 1450px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 所有圖片上下居中 */
+.container img {
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* 卡片背景圖 */
+.content {
+    width: 1511px;
+    height: 934px;
+    background: url(../image/stt-27.png) no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: -755px;
+}
+
+/* 切換書籤 */
+.left_nav {
+    position: absolute;
+    left: 32px;
+    top: 300px;
+}
+
+/* 監管著的書籤 */
+.nav_jgz {
+    background: url(../image/stt-28.png) no-repeat;
+    display: block;
+    width: 84px;
+    height: 175px;
+    transition: all .2s;
+    position: relative;
+}
+
+/* 紅色釘子的圖標 */
+.left_nav i {
+    position: absolute;
+    width: 33px;
+    height: 52px;
+    left: 0;
+    top: 7px;
+    background: url(../image/stt-30.png) no-repeat;
+    opacity: 0;
+    transition: all .2s;
+}
+
+/* 釘子發亮 */
+.left_nav>[title]:hover i {
+    opacity: 1;
+}
+
+/* 觸發點擊  釘子高亮*/
+#xuazn i {
+    opacity: 1;
+}
+
+/* hover高亮 */
+.shuq:hover {
+    z-index: 300;
+    filter: brightness(0.8);
+}
+
+/* 點擊保持書籤常亮 */
+#xuazn {
+    z-index: 300;
+    filter: brightness(0.8);
+}
+
+/* 求生者書籤 */
+.nav_qsz {
+    background: url(../image/stt-4.png) no-repeat;
+    display: block;
+    width: 84px;
+    height: 175px;
+    margin-top: 12px;
+    margin-left: 3px;
+    transition: all .2s;
+    position: relative;
+}
+
+/* 書本 */
+.mid_text {
+    width: 1248px;
+    height: 612px;
+    margin: 151px auto 0;
+    position: relative;
+}
+
+/* 人物所有圖標 */
+.itemzz {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    z-index: 20;
+    font-size: 0;
+    height: 606px;
+    outline: none;
+}
+
+/* 人物圖標滑動區域 */
+.left_silde {
+    display: inline-block;
+    vertical-align: top;
+    width: 89px;
+    height: 606px;
+    overflow: hidden;
+    outline: none;
+    position: relative;
+}
+
+/* 所有圖標 */
+.neirong {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: all 0.09s linear;
+
+}
+
+/* 人物小圖標 */
+.mid_text li {
+    width: 77px;
+    height: 77px;
+    margin: 29px auto 0;
+    cursor: pointer;
+    background: url(../image/stt-88.png) no-repeat;
+    background-color: #000;
+    z-index: 20000;
+    transition: all .2s;
+}
+
+/* 人物圖標第一個消除上邊距 */
+.neirong li:first-child {
+    margin-top: 0 !important;
+}
+
+/* 滾動條div */
+.gdt {
+    width: 6px;
+    z-index: 1;
+    cursor: default;
+    position: absolute;
+    top: 0px;
+    left: 89px;
+    height: 606px;
+    display: block;
+    background: url(../image/stt-90.png) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+/* 滾動條 */
+.gdtnr {
+    position: relative;
+    top: 0px;
+    float: right;
+    width: 6px;
+    height: 235px;
+    background-color: rgb(66, 66, 66);
+    border: 0px;
+    background-clip: padding-box;
+    border-radius: 5px;
+}
+
+/* 右側文本和圖片區域 */
+.intro_box {
+    padding-left: 100px;
+    position: relative;
+}
+
+/* 中間文本區域 */
+.mid_intro {
+    display: inline-block;
+    vertical-align: top;
+    height: 612px;
+    width: 527px;
+    position: relative;
+}
+
+/* 文本名字背景圖 */
+.title_name {
+    width: 477px;
+    height: 126px;
+    background: url(../image/stt-71.png) no-repeat;
+    text-align: center;
+    font-size: 0;
+    margin: 0 auto;
+    line-height: 126px;
+}
+
+/* 姓名圖片 */
+.title_name>img {
+    display: inline-block;
+}
+
+/* 人物簡介文本框 */
+.text {
+    overflow: hidden;
+    outline: none;
+    width: 480px;
+    margin: 25px 0 0 15px;
+    height: 290px;
+    padding-right: 15px;
+}
+
+/* 人物介紹文本 */
+.text p {
+    line-height: 36px;
+    font-size: 16px;
+    color: #24211f;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+/* 能力介紹框 */
+.power_intro {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    width: 100%;
+}
+
+/* 能力介紹文字背景圖 */
+.top_title {
+    width: 475px;
+    height: 36px;
+    background: url(../image/stt-72.png) no-repeat;
+}
+
+/* 能力 */
+.jn_box {
+    /* font-size: 0; */
+    margin-top: 20px;
+    position: relative;
+    z-index: inherit;
+}
+
+/* 右側人物背景圖 */
+.right_img {
+    position: absolute;
+    width: 579px;
+    height: 576px;
+    right: 15px;
+    bottom: 19px;
+}
+
+/* 播放按鈕 */
+.video_btn {
+    position: absolute;
+    left: 13px;
+    top: 20px;
+    width: 61px;
+    height: 67px;
+    background: url(../image/stt-77.png) no-repeat;
+    z-index: 20;
+}
+
+/* 人物圖片 */
+.right_img>img {
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+}
+
+/* 能力隱藏 */
+.jn_details {
+    display: none;
+}
+
+
+/* 能力小圖標div */
+.jn {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* 能力圖片 */
+.jn img {
+    display: block;
+    width: 67px;
+    height: auto;
+    margin: 0 auto;
+}
+/* 能力小圖標 */
+.jn:first-child {
+    margin-left: 0;
+}
+
+/* 能力技能文字 */
+.jn p {
+    /* width: 67px; */
+    font-size: 14px;
+    color: #24211f;
+    text-align: center;
+}
+
+/* 書本2隱藏 */
+.shub2 {
+    display: none;
+}
+
+/* 小圖標變亮 */
+.left_silde li:hover {
+    background: url(../image/stt-31.png) no-repeat;
+    transition: all .2s;
+}

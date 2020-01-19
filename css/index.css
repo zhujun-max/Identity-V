@@ -1,0 +1,644 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Microsoft YaHei", simSun, "Lucida Grande", "Lucida Sans Unicode", Arial;
+    font-size: 14px;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+a,a:hover {
+    text-decoration: none;
+}
+
+a,button {
+    cursor: pointer;
+}
+
+/* 頁面點幾 跳轉div */
+[class|=a] {
+    z-index: 11;
+}
+
+/* 所有圖片高亮 */
+[class|=a]:hover+div {
+    filter: brightness(1.2);
+    transition: all 0.4s;
+}
+/* 接受委託圖片高亮 */
+.a-jswt:hover~.jswt {
+    filter: brightness(1.0);
+    transition: all 0.4s;
+}
+/* 背景圖 */
+.wrap {
+    min-width: 1260px;
+    max-width: 1920px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: #fff url(../image/zj-01.jpg) center top no-repeat;
+}
+
+/* 第五人格logo */
+.logo {
+    width: 254px;
+    height: 141px;
+    float: left;
+    position: absolute;
+    top: 195px;
+    left: 50%;
+    margin-left: -140px;
+    background: url(../image/zj-18.png);
+    cursor: default;
+    z-index: 10;
+}
+
+/* 中間小三角 */
+.video-btn {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    top: 200px;
+    left: 50%;
+    margin-left: 115px;
+    background: url(../image/zj-19.png) 55% center no-repeat;
+    z-index: 10;
+    transition: all 0.3s;
+}
+/* 小三角旋轉動畫 */
+.video-btn:hover {
+    transition: all 0.3s;
+    transform: rotate(90deg);
+}
+
+/* 圓圈旋轉效果 */
+.video-btn i {
+    width: 78px;
+    height: 78px;
+    float: left;
+    background: url(../image/zj-20.png) center center no-repeat;
+    animation:xuan 3s linear infinite; 
+}
+/* 旋轉效果 */
+@keyframes xuan{
+    100%{-webkit-transform:rotate(360deg);}
+  }
+
+/* 陌生人的來信 */
+.wx-code {
+    position: absolute;
+    top: 145px;
+    left: 50%;
+    margin-left: 420px;
+    z-index: 10;
+    transform: rotate(5deg);
+}
+
+/* 信二維碼 */
+.wx-code img {
+    width: 75px;
+}
+
+/* 掃一掃二維碼 */
+.downQrCodeBox {
+    width: 201px;
+    height: 204px;
+    background: url(../image/zj-24.png) no-repeat;
+    position: absolute;
+    top: 564px;
+    left: 50%;
+    margin-left: -370px;
+}
+
+/* 掃一掃下載遊戲 */
+.downQrCodeBox img {
+    display: block;
+    position: absolute;
+    width: 144px;
+    height: 145px;
+    top: 21px;
+    left: 36px;
+    border: 0;
+    outline: none;
+}
+
+/* 接收委託 */
+.jswt {
+    background: url(../image/zj-25.png);
+}
+
+.a-jswt,.jswt {
+    width: 437px;
+    height: 350px;
+    position: absolute;
+    top: 345px;
+    left: 50%;
+    margin-left: -222px;
+}
+
+/* 接收委託圖片 */
+.jswt img {
+    width: 350px;
+    height: 225px;
+    float: left;
+    margin: 49px 0 0 45px;
+    -o-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+}
+
+/* 接受委託文字 */
+.jswt .tt {
+    width: 206px;
+    height: 65px;
+    float: left;
+    margin: -35px 0 0 35px;
+    position: relative;
+    z-index: 1;
+    background: url(../image/zj-26.png);
+}
+
+/* 過渡全部 */
+.jysp,
+.mslx,
+.jswt,
+.yfshr,
+.zjbl,
+.xaxc,
+.wzzl {
+    filter: brightness(0.75);
+    /* transition: all 1s; */
+}
+
+/* 奇異男子圖片 */
+.banner {
+    position: absolute;
+    top: 155px;
+    left: 50%;
+    float: left;
+    margin-left: -654px;
+    z-index: 10;
+}
+
+/* 奇異男子圖片大小 */
+.banner .bd img {
+    width: 255px;
+    height: 154px;
+}
+
+/* 文章內容 */
+.news {
+    width: 404px;
+    height: 247px;
+    position: absolute;
+    top: 290px;
+    left: 50%;
+    float: left;
+    margin-left: -720px;
+    z-index: 10;
+    background: url(../image/zj-27.png);
+}
+
+/* 文章頁頭 */
+.news .hd {
+    width: 315px;
+    float: left;
+    height: 36px;
+    margin: 30px 20px 0 50px;
+    border-bottom: 1px solid #5a5753;
+}
+
+/* 頁頭文字，下劃線 */
+.news .hd li:hover {
+    font-weight: bolder;
+    border-bottom: 2px solid #2a2522;
+}
+
+/* 頁頭內容區域 */
+.news .hd li {
+    width: 65px;
+    float: left;
+    line-height: 35px;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+}
+
+/* 文章頁頭加號 */
+.news .hd .more {
+    width: 17px;
+    height: 17px;
+    float: right;
+    margin-top: 8px;
+    background: url(../image/zj-28.png);
+}
+
+/* 文章主體 */
+.news .bd {
+    width: 290px;
+    float: left;
+    margin: 10px 30px 0 67px;
+}
+
+.news .bd ul {
+    width: 100%;
+    min-height: 120px;
+    float: left;
+}
+
+.news .bd li {
+    color: #1b0908;
+    line-height: 40px;
+}
+
+.news .bd li span {
+    float: right;
+}
+
+.news .bd li a {
+    width: 238px;
+    height: 40px;
+    display: block;
+    color: #1b0908;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 頁面紅色線條 */
+.red-line {
+    width: 1576px;
+    height: 771px;
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    margin-left: -810px;
+    z-index: 1;
+    background: url(../image/zj-29.png);
+}
+
+/* 相關人物 */
+.a-yfshr,.yfshr {
+    width: 423px;
+    height: 328px;
+    position: absolute;
+    top: 612px;
+    left: 50%;
+    margin-left: -852px;
+}
+/* 相關人物針頭 */
+.needle{
+width: 54px;
+height: 101px;
+position: absolute;
+top: 160px;
+left: 245px;
+background: url(../image/zj-31.png);
+opacity: 0;
+}
+.a-yfshr:hover~.yfshr .needle {
+    animation: needle ease-in .2s .2s both
+}
+@keyframes needle {
+    0% {
+        transform: translateY(-150%) translateX(-100%) scale(1.8)
+    }
+
+    100% {
+        transform: translateY(0%) translateX(0%) scale(1);
+        opacity: 1;
+        /* 下面代碼只是為了兼容ie8以下的所有瀏覽器 */
+        filter: alpha(opacity=100)
+    }
+}
+
+/* 病歷 */
+.zjbl,
+.a-zjbl {
+    width: 343px;
+    height: 249px;
+    position: absolute;
+    top: 770px;
+    left: 50%;
+    margin-left: -404px;
+}
+
+/* 發生地點 */
+.xaxc,
+.a-xaxc {
+    width: 374px;
+    height: 303px;
+    position: absolute;
+    top: 742px;
+    left: 50%;
+    margin-left: 5px;
+}
+/* 飄葉圖 */
+.xaxc .pic {
+    width: 292px;
+    height: 217px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background: url(../image/zj-36.png);
+}
+/* 飄業特效 */
+.a-xaxc:hover~.xaxc .pic {
+        animation: pic ease-in-out .8s .1s both
+}
+@keyframes pic {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%)
+    }
+}
+
+/* 物證資料 */
+.wzzl,
+.a-wzzl {
+    width: 480px;
+    height: 340px;
+    position: absolute;
+    top: 640px;
+    left: 50%;
+    margin-left: 400px;
+}
+
+/* 陌生人的來信 */
+.wzzl,
+.a-wzzl {
+    width: 480px;
+    height: 340px;
+    position: absolute;
+    top: 640px;
+    left: 50%;
+    margin-left: 400px;
+}
+
+/* 記憶碎片 */
+.a-jysp,
+.jysp {
+    width: 609px;
+    height: 257px;
+    position: absolute;
+    top: 373px;
+    left: 50%;
+    margin-left: 286px;
+}
+
+/* 記憶碎片 */
+.a-jysp .gainian {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/* 相關人物 */
+.yfshr {
+    background: url(../image/zj-30.png) no-repeat;
+}
+
+/* 病歷·奧爾菲斯 */
+.zjbl {
+    background: url(../image/zj-32.png);
+}
+
+/* 病歷星期三藥代 */
+.zjbl .pill {
+    width: 131px;
+    height: 171px;
+    position: absolute;
+    top: 106px;
+    left: -38px;
+    background: url(../image/zj-33.png);
+    transform-origin: 59px 20px;
+    /*動畫  名稱  開始結尾較慢 完成時間 間隔時間 播放方式 播放次數  */
+    animation: male ease-in-out 1.2s .4s alternate infinite;
+}
+
+/* 藥袋晃動特效 */
+@keyframes male {
+    100% {
+        transform: rotate(10deg)
+    }
+}
+
+/* 病歷藥袋日期 */
+.zjbl .pill p {
+    float: left;
+    margin: 84px 0 0 55px;
+    color: #000;
+    -o-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+}
+
+/* 發生地點 */
+.xaxc {
+    background: url(../image/zj-34.png);
+}
+
+/* 發生地點文字 */
+.xaxc .tt {
+    width: 178px;
+    height: 80px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: 1;
+    background: url(../image/zj-35.png);
+}
+
+/* 飄葉圖 */
+.xaxc .pic {
+    width: 292px;
+    height: 217px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background: url(../image/zj-36.png);
+}
+
+/* 物證資料 */
+.wzzl {
+    background: url(../image/zj-37.png);
+}
+
+/* 物證資料醫療箱 */
+.wzzl .card {
+    width: 123px;
+    height: 120px;
+    position: absolute;
+    top: 175px;
+    left: 110px;
+    background: url(../image/zj-38.png);
+    transform-origin: 58px 15px;
+    animation: male ease-in-out 1.2s  alternate infinite;
+    animation-play-state: paused;
+}
+.a-wzzl:hover~.wzzl>.card {
+    animation-play-state: running;
+}
+
+.a-wzzl:hover~.wzzl>.card_bg {
+    animation-play-state: running;
+}
+@keyframes female {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(-10deg)
+    }
+}
+
+/* 物證資料收集袋 */
+.wzzl .card_bg {
+    width: 176px;
+    height: 197px;
+    position: absolute;
+    top: 43px;
+    left: 267px;
+    background: url(../image/zj-39.png);
+    
+    transform-origin: 76px 20px;
+    animation: female ease-in-out 1.2s  alternate infinite;
+    animation-play-state: paused;
+}
+
+/* 陌生人的來信 */
+.mslx {
+    background: url(../image/zj-40.png);
+}
+
+.a-mslx,
+.mslx {
+    width: 411px;
+    height: 350px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: 215px;
+}
+
+/* 記憶碎片 */
+.jysp {
+    background: url(../image/zj-41.png);
+}
+
+/* 右側紅色線條圖片 */
+.mdy_connect {
+    width: 727px;
+    height: 564px;
+    background: url(../image/zj-46.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 50%;
+    top: 168px;
+    margin-left: 553px;
+}
+/* 切換屏幕 */
+.swh_btn {
+    display: block;
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    margin-top: -28px;
+    width: 55px;
+    height: 55px;
+    background: url(../image/zj-52.png) no-repeat;
+    background-size: 100%;
+    z-index: 99;
+    animation: swhAni 8s linear infinite;
+}
+@keyframes swhAni {
+    0% {
+        transform: rotate(0)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+/* 遮罩層 */
+.Layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    z-index: 100;
+    transition: all .3s;
+    display: none;
+}
+
+/* 遮罩層上內容區域 */
+.pop {
+    margin-top: -80px;
+    margin-left: -421.5px;
+    width: 805px;
+    height: 250px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    z-index: 1000;
+    display: none;
+}
+/* 加右邊框 */
+.pop li {
+    width: 160px;
+    height: 100%;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #7b7b6e;
+}
+/* 消除最後一個元素的邊框 */
+.pop li:last-of-type {
+    border: 0;
+}
+/* 遮罩層圖片 */
+.pop img {
+    width: 120px;
+    height: 120px;
+    line-height: 116px;
+    vertical-align: middle;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 2px solid #7b7b6e;
+}
+/* 遮罩層文字 */
+.pop p {
+    color: #ccc5a8;
+    font-size: 16px;
+}
+/* team members */
+.pop div {
+    height: 80px;
+    display: block;
+    width: 100%;
+    font-size: 3rem;
+    color: #ccc5a8;
+    text-align:center
+}

@@ -1,0 +1,223 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+hr,
+figure,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu {
+  margin: 0;
+  padding: 0;
+}
+/* 给相对于背景图片的图片做绝对定位,设置图片左上角相对于页面居中 */
+.wrap>[class]{
+  position: absolute;
+  left: 50%;
+}
+
+/* 鼠標懸停高亮bug:主要原因是3个a标签必須寫在body的最前面，背景圖在後面,hover并~为兄弟选择器*/
+
+/* 可疑线索图片覆盖a标签位置 */
+.a_kyxs {
+  width: 424px;
+  height: 483px;
+  margin-left: -753px;
+  top: 50px;
+}
+
+/* 旧闻新绎图片覆盖a标签位置 */
+.a_jwxy {
+  width: 565px;
+  height: 435px;
+  margin-left: -770px;
+  top: 560px;
+}
+
+/* 玩偶之家图片覆盖a标签位置 */
+.a_wozj {
+  width: 475px;
+  height: 300px;
+  margin-left: -172px;
+  top: 715px;
+}
+
+/*覆盖背景图片的a标签
+    功能:
+        设置z轴层级,使鼠标hover时优先触碰a标签
+*/
+.a_kyxs,
+.a_jwxy,
+.a_wozj {
+  z-index: 3;
+}
+
+/*覆盖背景图片的a标签
+    功能:设置当鼠标hover时背景图片高亮
+          当鼠标hover时,背景图片高亮过渡时间为1s
+*/
+.a_kyxs:hover ~ .kyxs,
+.a_jwxy:hover ~ .jwxy,
+.a_wozj:hover ~ .wozj {
+  filter: brightness(1.2);
+  transition:0.4s;
+}
+
+/* 先讓三張圖背景為0.75的亮度,只有這三張圖亮，就設置這三張圖 */
+.kyxs,
+.jwxy,
+.wozj {
+  filter: brightness(0.75);
+}
+
+/* 最底层背景图片 center top no-repeat*/
+.wrap {
+  min-width: 1260px;
+  max-width: 1920px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+  background-size:100%;
+  background: #555 url(../image/yy_10042.jpg) center top no-repeat;
+}
+
+/* 线路图,层级为2 */
+.Clues_figure {
+  width: 1139px;
+  height: 826px;
+  background: rgba(0, 0, 0, 0) url(../image/yy_10050.png) no-repeat;
+  background-size:100%;
+  margin-left: -660px;
+  top: 70px;
+  z-index: 2;
+}
+
+/* 最右侧遮挡板 */
+.barrier {
+  width: 675px;
+  height: 1080px;
+  background: rgba(0, 0, 0, 0) url(../image/yy_10051.png) no-repeat;
+  margin-left: 285px;
+}
+
+/* 最左侧音乐符号线路图 */
+.music {
+  width: 727px;
+  height: 564px;
+  background: url(../image/yy_10046.png) no-repeat;
+  top: 168px;
+  margin-left: -1350px;
+}
+
+/* 可疑线索图片导入 */
+.kyxs {
+  width: 472px;
+  height: 511px;
+  margin-left: -785px;
+  top: 50px;
+  background: url(../image/yy_10043.png) no-repeat;
+}
+
+/* 旧闻新绎图片导入 */
+.jwxy {
+  width: 627px;
+  height: 552px;
+  top: 527px;
+  margin-left: -785px;
+  background: url(../image/yy_10044.png) no-repeat;
+}
+
+/* 玩偶之家图片导入 */
+.wozj {
+  width: 570px;
+  height: 354px;
+  background: url(../image/yy_10045.png) no-repeat;
+  top: 730px;
+  margin-left: -270px;
+}
+
+/* 扑克牌图片导入 */
+.pkp {
+  width: 193px;
+  height: 224px;
+  background: url(../image/yy_10049.png) no-repeat;
+  top: 160px;
+  margin-left: -405px;
+}
+
+/* 纽扣图片导入 */
+.fastener {
+  width: 126px;
+  height: 123px;
+  background: url(../image/yy_10048.png) no-repeat;
+  top: 90px;
+  margin-left: -200px;
+}
+
+/* 动画摆动的钟表导入 */
+.watch {
+  width: 176px;
+  height: 755px;
+  background: url(../image/yy_10047.png) no-repeat;
+  top: 0px;
+  margin-left: -850px;
+  animation: female1 ease-in-out 3s alternate infinite;
+  transform-origin: 91px 0;
+}
+
+/* 动画钟表的属性animation:选择器名称female1 */
+@keyframes female1 {
+  0% {
+      transform: rotate(1.5deg);
+  }
+  100% {
+      transform: rotate(-1.5deg);
+  }
+}
+/* 切換屏幕 */
+.swh_btn {
+  display: block;
+  left: 100% !important;
+  margin-left: -80px;
+  top: 50%;
+  margin-top: -28px;
+  width: 55px;
+  height: 55px;
+  background: url(../image/zj-52.png) no-repeat;
+  background-size: 100%;
+  z-index: 9;
+  animation: swhAni 8s linear infinite;
+}
+@keyframes swhAni {
+  0% {
+      transform: rotate(0)
+  }
+  50% {
+      transform: rotate(180deg)
+  }
+  100% {
+      transform: rotate(360deg)
+  }
+}
